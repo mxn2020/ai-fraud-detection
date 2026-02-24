@@ -1,56 +1,94 @@
 # AI Fraud Detection System
 
-## Pages & Features
+Real-time AI-powered fraud detection and risk scoring.
 
-### 1. Dashboard
-- Real-time fraud risk score overview
-- Active alerts & flagged transactions
-- Fraud rate trend (daily / weekly / monthly)
-- Financial impact summary (prevented losses)
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Transaction Monitor
-- Live transaction feed with risk scoring
-- Filter by risk level, amount, channel, geography
-- Transaction detail view with AI risk explanation
-- Manual approve / block / investigate actions
+## Tech Stack
 
-### 3. Alert Management
-- Prioritized alert queue
-- Case assignment & status tracking
-- Investigation notes & evidence attachment
-- Alert resolution workflow (confirmed fraud, false positive)
-- Bulk actions for similar alerts
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. AI Risk Engine
-- Rule-based & ML model combination
-- Custom rule builder (amount thresholds, velocity checks)
-- Anomaly detection configuration
-- Device fingerprinting & geolocation analysis
-- Behavioral pattern recognition
+## Getting Started
 
-### 5. Case Investigation
-- Unified view of customer, transaction, & alert history
-- Network analysis (linked accounts, devices, IPs)
-- Timeline visualization of suspicious activity
-- Evidence collection & documentation
-- Regulatory reporting templates (SAR)
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Watchlists & Blocklists
-- Manage blocked cards, accounts, IPs, devices
-- Sanctions & PEP list screening
-- Custom watchlist creation
-- Auto-block rules configuration
+## License
 
-### 7. Analytics & Reports
-- Fraud type distribution (card, identity, account takeover)
-- False positive rate & model accuracy
-- Prevention effectiveness metrics
-- Geographic fraud hotspot map
-- Export as PDF / CSV
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Risk threshold configuration
-- Alert routing & escalation rules
-- Data source integrations (payment gateway, CRM, KYC)
-- Model retraining schedule
-- Compliance & audit log settings
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
